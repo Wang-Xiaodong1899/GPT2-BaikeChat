@@ -19,7 +19,7 @@ conda create -n CDial
 - torch==1.8.0
 
 ### Interact
-Please download our pretrained models ([GPT-chat-chat](null), [CDial](null)), and easily replace the checkpoint path in interact.py and interact_CDial_GPT.py.
+Please download our pretrained models ([GPT-chat-chat](https://github.com/yangjianxin1/GPT2-chitchat), [CDial](https://github.com/thu-coai/CDial-GPT)), and easily replace the checkpoint path in interact.py and interact_CDial_GPT.py.
 #### For GPT-chit-chat: 
 ```
 conda activate chitchat
@@ -103,7 +103,7 @@ Step 3: load dataset，数据集的长度截断到max_len，才可以封装到ba
 Finetuned the gpt-chit-chat model on 32w datasets.
 - [x] Inference the finetuned 1 epoch checkpoint, compared with the original chit-chat model.
 - [x] Inference the finetuned 4 epochs checkpoint, compared with the original chit-chat model.
-- [ ] TODO: Inference finetuned model.
+- [x] TODO: Inference finetuned model.
 
 
 ### Transfer
