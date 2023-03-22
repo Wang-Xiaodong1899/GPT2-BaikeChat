@@ -60,22 +60,22 @@ Step 3: load dataset，数据集的长度截断到max_len，才可以封装到ba
 
 ### GPT2
 - [x] 阅读GPT2基本框架  
-<img src="./decoder.png" width="50%" height="50%">
+<img src="assets/decoder.png" width="50%" height="50%">
 
 ### 前端修改
 - [x] 修改部分前端内容，demo如下所示  
-<img src="./demo.png" width="40%" height="40%">
+<img src="assets/demo.png" width="40%" height="40%">
 
 
 ### Inference the pretrained models
 - [x] TODO: 重载GPT2-Chinese的预训练模型, inference完成。 ddl (May 5, 2022)
 - [x] 这里使用的是GPT2-Chinese的[通用中文模型-base](https://drive.google.com/drive/folders/1dLEANs5z4pWS0pzrak6Q2H2Nq4iYsMsf)。当然也可以使用[通用中文模型-small](https://drive.google.com/drive/folders/1eerX1N8n_eFlnQ4xpxZ4iU2-Mx83pXFp)，可以加快推理速度。
 - [x] Problrms: 如果控制回答的长度（输出回复长度较短）
-<img src="./p1.png" width="100%" height="100%">
+<img src="assets/p1.png" width="100%" height="100%">
 1）调整max_len，原始值=25，重新设置为50. 主要原因是回复生成了[SEP]，默认认为结束了回复。
-<img src="./p2.png" width="100%" height="100%">
+<img src="assets/p2.png" width="100%" height="100%">
 2）设置如果大于max_len并且生成了[sep]则回复结束，将[SEP]变成“句号”即可。 ps (速度很慢)
-<img src="./p4.png" width="100%" height="100%"> 
+<img src="assets/p4.png" width="100%" height="100%"> 
 
 - [x] 存在问题：语言模型用来对话效果很差，逻辑性很差。
 尝试：使用闲聊语料的预训练模型而不是通用语料的预训练模型，是不是会不一样？   
